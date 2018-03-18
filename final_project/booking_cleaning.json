@@ -1,0 +1,2162 @@
+[
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column OCCUPATION",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OCCUPATION",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          " ;  ;  ;  ; PLUMBER"
+        ],
+        "to": "PLUMBER"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column OCCUPATION",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OCCUPATION",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          " ; PAINTER"
+        ],
+        "to": "PAINTER"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column OCCUPATION",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OCCUPATION",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          " ; OTHER (SPECIFY)"
+        ],
+        "to": "OTHER (SPECIFY)"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column OCCUPATION",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OCCUPATION",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          " ; FOOD PROCESSOR"
+        ],
+        "to": "FOOD PROCESSOR"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column OCCUPATION",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OCCUPATION",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          " ; CARPENTER"
+        ],
+        "to": "CARPENTER"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column OCCUPATION",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OCCUPATION",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          " ;  ;  ;  "
+        ],
+        "to": ""
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column OCCUPATION",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OCCUPATION",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          " "
+        ],
+        "to": ""
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column OCCUPATION",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OCCUPATION",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          " ;  ;  "
+        ],
+        "to": ""
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column OCCUPATION",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OCCUPATION",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          " ;  "
+        ],
+        "to": ""
+      }
+    ]
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column OFFENDERNAME using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OFFENDERNAME",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column OFFENDERNAME using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OFFENDERNAME",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column DOB using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DOB",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column DOB using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DOB",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column GENDER",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "GENDER",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "M"
+        ],
+        "to": "MALE"
+      }
+    ]
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column GENDER using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "GENDER",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column GENDER using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "GENDER",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column RACE",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RACE",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          " "
+        ],
+        "to": ""
+      }
+    ]
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column RACE using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RACE",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column RACE using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RACE",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column START_DATE using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "START_DATE",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column START_DATE using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "START_DATE",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column END_DATE using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "END_DATE",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column END_DATE using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "END_DATE",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column ARRESTAGENCY using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ARRESTAGENCY",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column ARRESTAGENCY using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ARRESTAGENCY",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ARRESTAGENCY",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ARRESTAGENCY",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "FPD"
+        ],
+        "to": "Fresno PD"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ARRESTAGENCY",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ARRESTAGENCY",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Fresno PD"
+        ],
+        "to": "FRESNO PD"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ARRESTAGENCY",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ARRESTAGENCY",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "HURON P.D."
+        ],
+        "to": "HURON PD"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ARRESTAGENCY",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ARRESTAGENCY",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "MAGEC"
+        ],
+        "to": "MAGEC-MULTI AGENCY GANG ENFORCEMENT CONSORTIUM"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ARRESTAGENCY",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ARRESTAGENCY",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "MAGEC-MULTI AGENCY GANG ENFORECMENT CONSORTIUM"
+        ],
+        "to": "MAGEC-MULTI AGENCY GANG ENFORCEMENT CONSORTIUM"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ARRESTAGENCY",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ARRESTAGENCY",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "CLOVIS CA."
+        ],
+        "to": "CLOVIS PD"
+      }
+    ]
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column RELEASE_TYPE using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RELEASE_TYPE",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column RELEASE_TYPE using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RELEASE_TYPE",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CHARGES using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CHARGES",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CHARGES using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CHARGES",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-split",
+    "description": "Split column CHARGES by separator",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CHARGES",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ";",
+    "regex": false,
+    "maxColumns": 0
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column BAIL 1 at index 14 based on column CHARGES 1 using expression grel:value.match(/.*(\\[\\d+\\]).*/)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "BAIL 1",
+    "columnInsertIndex": 14,
+    "baseColumnName": "CHARGES 1",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column BAIL 1",
+    "columnName": "BAIL 1"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail at index 15 based on column CHARGES 2 using expression grel:value.match(/.*(\\[\\d+\\]).*/)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail",
+    "columnInsertIndex": 15,
+    "baseColumnName": "CHARGES 2",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column bail",
+    "columnName": "bail"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 1 at index 14 based on column CHARGES 1 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0]",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 1",
+    "columnInsertIndex": 14,
+    "baseColumnName": "CHARGES 1",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 1_clean at index 15 based on column bail 1 using expression grel:value.replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 1_clean",
+    "columnInsertIndex": 15,
+    "baseColumnName": "bail 1",
+    "expression": "grel:value.replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 1_clean at index 14 based on column CHARGES 1 using expression grel:value.match(/.*(\\].+\\{).*/)[0]",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 1_clean",
+    "columnInsertIndex": 14,
+    "baseColumnName": "CHARGES 1",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges1_cleaner at index 15 based on column charges 1_clean using expression grel:value.replace(\"{\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges1_cleaner",
+    "columnInsertIndex": 15,
+    "baseColumnName": "charges 1_clean",
+    "expression": "grel:value.replace(\"{\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 1 using expression grel:value.replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 1",
+    "expression": "grel:value.replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column bail 1_clean",
+    "columnName": "bail 1_clean"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column charges 1_clean using expression grel:value.replace(\"{\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "charges 1_clean",
+    "expression": "grel:value.replace(\"{\",\"\").replace(\"]\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column charges1_cleaner",
+    "columnName": "charges1_cleaner"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column charges 1_clean using expression grel:value.replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "charges 1_clean",
+    "expression": "grel:value.replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column charges 1_clean using expression grel:value.replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "charges 1_clean",
+    "expression": "grel:value.replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 2_clean at index 17 based on column CHARGES 2 using expression grel:value.match(/.*(\\].+\\{).*/)[0]",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 2_clean",
+    "columnInsertIndex": 17,
+    "baseColumnName": "CHARGES 2",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column charges 2_clean using expression grel:value.replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "charges 2_clean",
+    "expression": "grel:value.replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 2 at index 17 based on column CHARGES 2 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 2",
+    "columnInsertIndex": 17,
+    "baseColumnName": "CHARGES 2",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-move",
+    "description": "Move column charges 2_clean to position 17",
+    "columnName": "charges 2_clean",
+    "index": 17
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 3 at index 20 based on column CHARGES 3 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 3",
+    "columnInsertIndex": 20,
+    "baseColumnName": "CHARGES 3",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 3_clean at index 20 based on column CHARGES 3 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 3_clean",
+    "columnInsertIndex": 20,
+    "baseColumnName": "CHARGES 3",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 4 at index 23 based on column CHARGES 4 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 4",
+    "columnInsertIndex": 23,
+    "baseColumnName": "CHARGES 4",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 4_clean at index 23 based on column CHARGES 4 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 4_clean",
+    "columnInsertIndex": 23,
+    "baseColumnName": "CHARGES 4",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 5 at index 26 based on column CHARGES 5 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 5",
+    "columnInsertIndex": 26,
+    "baseColumnName": "CHARGES 5",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 5_clean at index 26 based on column CHARGES 5 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 5_clean",
+    "columnInsertIndex": 26,
+    "baseColumnName": "CHARGES 5",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 3 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 3",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 2 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 2",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 1 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 1",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 4 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 4",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 5 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 5",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 6 at index 29 based on column CHARGES 6 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 6",
+    "columnInsertIndex": 29,
+    "baseColumnName": "CHARGES 6",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 6 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 6",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 6_clean at index 29 based on column CHARGES 6 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 6_clean",
+    "columnInsertIndex": 29,
+    "baseColumnName": "CHARGES 6",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 7 at index 32 based on column CHARGES 7 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 7",
+    "columnInsertIndex": 32,
+    "baseColumnName": "CHARGES 7",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 7 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 7",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 7_clean at index 32 based on column CHARGES 7 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 7_clean",
+    "columnInsertIndex": 32,
+    "baseColumnName": "CHARGES 7",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 8 at index 35 based on column CHARGES 8 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 8",
+    "columnInsertIndex": 35,
+    "baseColumnName": "CHARGES 8",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 8 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 8",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 8_clean at index 35 based on column CHARGES 8 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 8_clean",
+    "columnInsertIndex": 35,
+    "baseColumnName": "CHARGES 8",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 9 at index 38 based on column CHARGES 9 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 9",
+    "columnInsertIndex": 38,
+    "baseColumnName": "CHARGES 9",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 9 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 9",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 9_clean at index 38 based on column CHARGES 9 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 9_clean",
+    "columnInsertIndex": 38,
+    "baseColumnName": "CHARGES 9",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 10 at index 41 based on column CHARGES 10 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 10",
+    "columnInsertIndex": 41,
+    "baseColumnName": "CHARGES 10",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 10 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 10",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 10_clean at index 41 based on column CHARGES 10 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 10_clean",
+    "columnInsertIndex": 41,
+    "baseColumnName": "CHARGES 10",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 11 at index 44 based on column CHARGES 11 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 11",
+    "columnInsertIndex": 44,
+    "baseColumnName": "CHARGES 11",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 11 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 11",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 11_clean at index 44 based on column CHARGES 11 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 11_clean",
+    "columnInsertIndex": 44,
+    "baseColumnName": "CHARGES 11",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 12 at index 47 based on column CHARGES 12 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 12",
+    "columnInsertIndex": 47,
+    "baseColumnName": "CHARGES 12",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 12 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 12",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 12_clean at index 47 based on column CHARGES 12 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 12_clean",
+    "columnInsertIndex": 47,
+    "baseColumnName": "CHARGES 12",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 13 at index 50 based on column CHARGES 13 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 13",
+    "columnInsertIndex": 50,
+    "baseColumnName": "CHARGES 13",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 13 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 13",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 13_clean at index 50 based on column CHARGES 13 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 13_clean",
+    "columnInsertIndex": 50,
+    "baseColumnName": "CHARGES 13",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 14 at index 53 based on column CHARGES 14 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 14",
+    "columnInsertIndex": 53,
+    "baseColumnName": "CHARGES 14",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 14 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 14",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 14_clean at index 53 based on column CHARGES 14 using expression grel:value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 14_clean",
+    "columnInsertIndex": 53,
+    "baseColumnName": "CHARGES 14",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column charges 14_clean",
+    "columnName": "charges 14_clean"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 14_clean at index 53 based on column CHARGES 14 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 14_clean",
+    "columnInsertIndex": 53,
+    "baseColumnName": "CHARGES 14",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 15 at index 56 based on column CHARGES 15 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 15",
+    "columnInsertIndex": 56,
+    "baseColumnName": "CHARGES 15",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 15 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 15",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 15_clean at index 56 based on column CHARGES 15 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 15_clean",
+    "columnInsertIndex": 56,
+    "baseColumnName": "CHARGES 15",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 16 at index 59 based on column CHARGES 16 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 16",
+    "columnInsertIndex": 59,
+    "baseColumnName": "CHARGES 16",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 16 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 16",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 16_clean at index 59 based on column CHARGES 16 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 16_clean",
+    "columnInsertIndex": 59,
+    "baseColumnName": "CHARGES 16",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 17 at index 62 based on column CHARGES 17 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 17",
+    "columnInsertIndex": 62,
+    "baseColumnName": "CHARGES 17",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 17 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 17",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 17_clean at index 62 based on column CHARGES 17 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 17_clean",
+    "columnInsertIndex": 62,
+    "baseColumnName": "CHARGES 17",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 18 at index 65 based on column CHARGES 18 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 18",
+    "columnInsertIndex": 65,
+    "baseColumnName": "CHARGES 18",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column charges 18 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "charges 18",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 18_clean at index 65 based on column CHARGES 18 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 18_clean",
+    "columnInsertIndex": 65,
+    "baseColumnName": "CHARGES 18",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 19 at index 68 based on column CHARGES 19 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 19",
+    "columnInsertIndex": 68,
+    "baseColumnName": "CHARGES 19",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 19 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 19",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 19_clean at index 68 based on column CHARGES 19 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 19_clean",
+    "columnInsertIndex": 68,
+    "baseColumnName": "CHARGES 19",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 20 at index 71 based on column CHARGES 20 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 20",
+    "columnInsertIndex": 71,
+    "baseColumnName": "CHARGES 20",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 20 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 20",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 20_clean at index 71 based on column CHARGES 20 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 20_clean",
+    "columnInsertIndex": 71,
+    "baseColumnName": "CHARGES 20",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 21 at index 74 based on column CHARGES 21 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 21",
+    "columnInsertIndex": 74,
+    "baseColumnName": "CHARGES 21",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 21 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 21",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 21_clean at index 74 based on column CHARGES 21 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 21_clean",
+    "columnInsertIndex": 74,
+    "baseColumnName": "CHARGES 21",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 22 at index 77 based on column CHARGES 22 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 22",
+    "columnInsertIndex": 77,
+    "baseColumnName": "CHARGES 22",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 22 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 22",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 22_clean at index 77 based on column CHARGES 22 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 22_clean",
+    "columnInsertIndex": 77,
+    "baseColumnName": "CHARGES 22",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column charges 18 to bail 18",
+    "oldColumnName": "charges 18",
+    "newColumnName": "bail 18"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 23 at index 80 based on column CHARGES 23 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 23",
+    "columnInsertIndex": 80,
+    "baseColumnName": "CHARGES 23",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 23 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 23",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 23_bail at index 80 based on column CHARGES 23 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 23_bail",
+    "columnInsertIndex": 80,
+    "baseColumnName": "CHARGES 23",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 24 at index 83 based on column CHARGES 24 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 24",
+    "columnInsertIndex": 83,
+    "baseColumnName": "CHARGES 24",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 24 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 24",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 24_clean at index 83 based on column CHARGES 24 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 24_clean",
+    "columnInsertIndex": 83,
+    "baseColumnName": "CHARGES 24",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 25 at index 86 based on column CHARGES 25 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 25",
+    "columnInsertIndex": 86,
+    "baseColumnName": "CHARGES 25",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 25 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 25",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 25_clean at index 86 based on column CHARGES 25 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 25_clean",
+    "columnInsertIndex": 86,
+    "baseColumnName": "CHARGES 25",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 26 at index 89 based on column CHARGES 26 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 26",
+    "columnInsertIndex": 89,
+    "baseColumnName": "CHARGES 26",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 26 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 26",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 26_clean at index 89 based on column CHARGES 26 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 26_clean",
+    "columnInsertIndex": 89,
+    "baseColumnName": "CHARGES 26",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 27 at index 92 based on column CHARGES 27 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 27",
+    "columnInsertIndex": 92,
+    "baseColumnName": "CHARGES 27",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 27_clean at index 92 based on column CHARGES 27 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 27_clean",
+    "columnInsertIndex": 92,
+    "baseColumnName": "CHARGES 27",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 27 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 27",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 28 at index 95 based on column CHARGES 28 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 28",
+    "columnInsertIndex": 95,
+    "baseColumnName": "CHARGES 28",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 28 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 28",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 28_clean at index 95 based on column CHARGES 28 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 28_clean",
+    "columnInsertIndex": 95,
+    "baseColumnName": "CHARGES 28",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 29 at index 98 based on column CHARGES 29 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 29",
+    "columnInsertIndex": 98,
+    "baseColumnName": "CHARGES 29",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 29_clean at index 98 based on column CHARGES 29 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 29_clean",
+    "columnInsertIndex": 98,
+    "baseColumnName": "CHARGES 29",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 29 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 29",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 30 at index 101 based on column CHARGES 30 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 30",
+    "columnInsertIndex": 101,
+    "baseColumnName": "CHARGES 30",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 30 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 30",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 30_clean at index 101 based on column CHARGES 30 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 30_clean",
+    "columnInsertIndex": 101,
+    "baseColumnName": "CHARGES 30",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 31 at index 104 based on column CHARGES 31 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 31",
+    "columnInsertIndex": 104,
+    "baseColumnName": "CHARGES 31",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 31 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 31",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 31_clean at index 104 based on column CHARGES 31 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 31_clean",
+    "columnInsertIndex": 104,
+    "baseColumnName": "CHARGES 31",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 32 at index 107 based on column CHARGES 32 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 32",
+    "columnInsertIndex": 107,
+    "baseColumnName": "CHARGES 32",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 32 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 32",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 32_clean at index 107 based on column CHARGES 32 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 32_clean",
+    "columnInsertIndex": 107,
+    "baseColumnName": "CHARGES 32",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 33 at index 110 based on column CHARGES 33 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 33",
+    "columnInsertIndex": 110,
+    "baseColumnName": "CHARGES 33",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 33 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 33",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 33_clean at index 110 based on column CHARGES 33 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 33_clean",
+    "columnInsertIndex": 110,
+    "baseColumnName": "CHARGES 33",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 34 at index 113 based on column CHARGES 34 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 34",
+    "columnInsertIndex": 113,
+    "baseColumnName": "CHARGES 34",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 34 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 34",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 34_clean at index 113 based on column CHARGES 34 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 34_clean",
+    "columnInsertIndex": 113,
+    "baseColumnName": "CHARGES 34",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 35 at index 116 based on column CHARGES 35 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 35",
+    "columnInsertIndex": 116,
+    "baseColumnName": "CHARGES 35",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 35 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 35",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 35_clean at index 116 based on column CHARGES 35 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 35_clean",
+    "columnInsertIndex": 116,
+    "baseColumnName": "CHARGES 35",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column bail 36 at index 119 based on column CHARGES 36 using expression grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "bail 36",
+    "columnInsertIndex": 119,
+    "baseColumnName": "CHARGES 36",
+    "expression": "grel:value.match(/.*(\\[\\d+\\]).*/)[0].replace(\"[\",\"\").replace(\"]\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column bail 36 using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bail 36",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column charges 36_clean at index 119 based on column CHARGES 36 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "charges 36_clean",
+    "columnInsertIndex": 119,
+    "baseColumnName": "CHARGES 36",
+    "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "onError": "set-to-blank"
+  }
+]
