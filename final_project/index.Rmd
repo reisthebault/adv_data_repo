@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Racial disparities in California's money bail system
 
-An analysis of jail booking and release data, produced as the final project for an advanced data reporting class at UC Berkeley's Graduate School of Journalism. Data and code can be found here. 
+An analysis of jail booking and release data, produced as the final project for an advanced data reporting class at UC Berkeley's Graduate School of Journalism. Data and code can be found [here](https://github.com/reisthebault/adv_data_repo/tree/master). 
 
 ### The story
 
