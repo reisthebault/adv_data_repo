@@ -1,0 +1,367 @@
+---
+title:
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Racial disparities in California's money bail system
+
+An analysis of jail booking and release data, produced as the final project for an advanced data reporting class at UC Berkeley's Graduate School of Journalism. Data and code can be found here. 
+
+### The story
+
+California’s system of money bail creates a two-tiered system of justice, critics say: one for the rich, one for the poor. Because money bail affects the poor and people of color more than anyone else, in Fresno, a minority-majority city with the state’s highest rates of poverty, those communities are hit especially hard. 
+
+Here's how it works: when you’re arrested and charged with a crime you then appear in court for your arraignment hearing, where the judge sets your bail. Pay this and you can go free and await your trial at home. But if you can't pay it, you have to stay locked up.
+
+In California, nearly every offense is bail-eligible, but, since the state’s median bail amount is so high — $50,000, five times the national average — many defendants must sit in jail because they cannot afford to pay.
+
+“The entire bail system in California is broken,” said Matthew Jendian, a Fresno State sociology professor. “We see the effect of that broken system more clearly and, unfortunately, more heavily in Fresno.”
+
+This story analyzes more than a year's worth of booking and release data from Fresno County Jail — obtained through a request made under the California Public Records Act — to reveal disparities throughout the system: in who's locked up, for how long, how they're released, and the factors that influence the bail they must pay.
+
+Read on to learn more about the data I used, the analysis I've done and what's left to do.
+
+
+### Data
+
+This data comes from the Fresno County Jail. It details bookings and releases — that is, people who are locked up in and who are released from the jail – from Jan. 2017 to Feb. 2018, one row per booking. Its original columns included: a unique ID number, the offender’s name, DOB, gender, race, zip code of residence, the start and end date of time in jail, the arresting agency, and the charges filed against the defendant, and the type of release the defendant was granted.
+
+The column in my data that contained the crimes each defendant was charged with and the bail amount associated with those crimes was pretty dirty — basically a string of text, numbers and symbols. I used OpenRefine and RegEx (code in aforementioned GitHub repo) to separate that column into columns that contained only the charge and only the bail amount (I did this for each charge, so there are 36 charge columns and 36 bail amount columns, because, yeah, someone had 36 charges). 
+
+### Setting up
+Loading packages to read, manipulate and plot our data.
+
+```{r warning=FALSE, message=FALSE}
+# load required packages
+library(readr)
+library(dplyr)
+library(lubridate)
+library(ggplot2)
+library(DT)
+
+```
+
+### Loading data
+
+A few of the bail amount columns read in as characters. We are converting them to numeric, like the others, in order to do calculations on them. 
+
+```{r results="hide", warning=FALSE, message=FALSE}
+# load data
+booking <- read_csv("fresnoBooking1718_clean.csv") %>%
+  mutate(START_DATE = as.POSIXct(START_DATE, format = "%m/%d/%Y %I:%M:%S %p"),
+         END_DATE = as.POSIXct(END_DATE, format = "%m/%d/%Y %I:%M:%S %p"),
+         time_jailed2 = difftime(END_DATE,START_DATE, unit = "days"))
+
+# converting bail amounts to numeric that read in as characters
+booking$`bail 23` <- as.numeric(as.character(booking$`bail 23`))
+booking$`bail 24` <- as.numeric(as.character(booking$`bail 24`))
+booking$`bail 25` <- as.numeric(as.character(booking$`bail 25`))
+booking$`bail 26` <- as.numeric(as.character(booking$`bail 26`))
+booking$`bail 27` <- as.numeric(as.character(booking$`bail 27`))
+booking$`bail 28` <- as.numeric(as.character(booking$`bail 28`))
+booking$`bail 29` <- as.numeric(as.character(booking$`bail 29`))
+booking$`bail 30` <- as.numeric(as.character(booking$`bail 30`))
+booking$`bail 31` <- as.numeric(as.character(booking$`bail 31`))
+booking$`bail 32` <- as.numeric(as.character(booking$`bail 32`))
+booking$`bail 33` <- as.numeric(as.character(booking$`bail 33`))
+booking$`bail 34` <- as.numeric(as.character(booking$`bail 34`))
+booking$`bail 35` <- as.numeric(as.character(booking$`bail 35`))
+booking$`bail 36` <- as.numeric(as.character(booking$`bail 36`))
+```
+
+
+### Which race is jailed most often?
+
+Are all races in Fresno County locked up proportional to their shares of the population? Keep in mind the relevant demographics, here: the county is 52 percent Hispanic, 31 percent white, 10 percent asian and 5 percent black. Thus, you can see black Fresnans are disproportionately jailed, three times their share of the county's population.
+
+```{r warning=FALSE, message=FALSE}
+
+# race
+race <- booking %>%
+  group_by(RACE) %>%
+  summarize(count = n()) %>%
+  arrange(desc(count)) %>%
+  mutate(percent = round(count/sum(count)*100,2))
+
+datatable(race, rownames = FALSE, colnames = c("race", "count", "percent"), options = list(dom = "t"))
+
+```
+
+### How are people getting released?
+
+People are released from jail for all sorts of reasons: their crime warranted only a citation, they paid bond, they qualified for a pre-trial supervision program, the jail was too crowded, etc. Which types of releases are most common? Any guesses on why the fifth-most popular release type is blank? (hint: if you haven't been *released* from jail, then where are you?)
+
+You can see the plurality of inmates were released on "time served." This means that they either served out their court-appointed sentence or, by the time their case made it to sentencing, the judge ruled they had already served enough jail time. Because of the sluggish pace of many cases, this happens frequently. 
+
+```{r warning=FALSE, message=FALSE}
+# release types
+release_types <- booking %>%
+  group_by(RELEASE_TYPE) %>%
+  summarize(count = n()) %>%
+  arrange(desc(count)) %>%
+  mutate(percent = round(count/sum(count)*100, 2))
+
+datatable(release_types, rownames = FALSE, colnames = c("release type", "count", "percent"))
+```
+
+### OK, now let's explore the types of releases by race
+Examine the table and you'll see that black inmates are far less likely than white inmates to be released on “pre-trial supervision,” which is considered the more lenient alternative to the money bail system. Black inmates are also less likely than white inmates to be released on their “own recognizance,” which means an inmate is allowed to go home if they promise to appear for their court hearings. 
+
+```{r warning=FALSE, message=FALSE}
+# release type by race
+release_race <- booking %>%
+  group_by(RELEASE_TYPE, RACE) %>%
+  summarize(count = n()) %>%
+  arrange(desc(count)) %>%
+  mutate(percent = round(count/sum(count)*100,2))
+
+datatable(release_race, rownames = FALSE, colnames = c("release type", "race", "count", "percent"))
+```
+
+### Who spends the most time in jail?
+
+Another place to look for potential disparities is to compare lengths of jail stay across races. First, let's look at the mean jail stays for each race. 
+
+```{r warning=FALSE, message=FALSE}
+# mean time jailed by race
+time_race_mean <- booking %>%
+  group_by(RACE) %>%
+  summarize(mean_days_jailed = round(mean(time_jailed, na.rm = TRUE),2)) %>%
+  arrange(desc(mean_days_jailed))
+
+datatable(time_race_mean, rownames = FALSE, colnames = c("race", "mean days jailed"), options = list(dom = "t"))
+```
+
+
+### Let's get a different look
+
+Is *mean* the best way to analyze jail stays? Considering there may be (there are) a small number of people who spent a long time in jail, we should also look at the median jail stays for each race. Notice the difference?
+
+But alas, this metric may not be that useful, as there are a lot of complicating variables. Length of stay, for example, only accounts for their stay in Fresno County jail. Upon “release,” many inmates are transferred to prisons, not actually released. It may be more useful to think of time jailed as a measure of the time it takes an inmate’s case to move through the justice system.
+
+```{r warning=FALSE, message=FALSE}
+# median time jailed by race
+time_race_median <- booking %>%
+  group_by(RACE) %>%
+  summarize(median_days_jailed = round(median(time_jailed, na.rm = TRUE),2)) %>%
+  arrange(desc(median_days_jailed))
+
+datatable(time_race_median, rownames = FALSE, colnames = c("race", "median days jailed"), options = list(dom = "t"))
+
+```
+
+### Time for a multiple linear regression
+
+What factors influence the bail amount that the court assigns each defendant? To help answer this question, we're going to do a multiple linear regression. Our output will be a defendant's total bail amount and our variables will be race, age, and types of crimes they've been charged with. 
+
+But before we do that, we need to do a couple things. First, let's figure out how many felonies and how many misdemeanors each defendant is charged with. Then, we'll add up all the bails associated with those charges to get a total bail amount for each defendant.
+
+```{r results="hide", warning=FALSE, message=FALSE}
+
+# create columns for felonies and misdemeanors
+booking <- booking %>%
+  mutate(charges_1_m = ifelse(grepl("\\[M\\]", `charges 1_clean`)==TRUE,1,0),
+         charges_1_f = ifelse(grepl("\\[F\\]", `charges 1_clean`)==TRUE,1,0),
+         charges_2_m = ifelse(grepl("\\[M\\]", `charges 2_clean`)==TRUE,1,0),
+         charges_2_f = ifelse(grepl("\\[F\\]", `charges 2_clean`)==TRUE,1,0),
+         charges_3_m = ifelse(grepl("\\[M\\]", `charges 3_clean`)==TRUE,1,0),
+         charges_3_f = ifelse(grepl("\\[F\\]", `charges 3_clean`)==TRUE,1,0),
+         charges_4_m = ifelse(grepl("\\[M\\]", `charges 4_clean`)==TRUE,1,0),
+         charges_4_f = ifelse(grepl("\\[F\\]", `charges 4_clean`)==TRUE,1,0),
+         charges_5_m = ifelse(grepl("\\[M\\]", `charges 5_clean`)==TRUE,1,0),
+         charges_5_f = ifelse(grepl("\\[F\\]", `charges 5_clean`)==TRUE,1,0),
+         charges_6_m = ifelse(grepl("\\[M\\]", `charges 6_clean`)==TRUE,1,0),
+         charges_6_f = ifelse(grepl("\\[F\\]", `charges 6_clean`)==TRUE,1,0),
+         charges_7_m = ifelse(grepl("\\[M\\]", `charges 7_clean`)==TRUE,1,0),
+         charges_7_f = ifelse(grepl("\\[F\\]", `charges 7_clean`)==TRUE,1,0),
+         charges_8_m = ifelse(grepl("\\[M\\]", `charges 8_clean`)==TRUE,1,0),
+         charges_8_f = ifelse(grepl("\\[F\\]", `charges 8_clean`)==TRUE,1,0),
+         charges_9_m = ifelse(grepl("\\[M\\]", `charges 9_clean`)==TRUE,1,0),
+         charges_9_f = ifelse(grepl("\\[F\\]", `charges 9_clean`)==TRUE,1,0),
+         charges_10_m = ifelse(grepl("\\[M\\]", `charges 10_clean`)==TRUE,1,0),
+         charges_10_f = ifelse(grepl("\\[F\\]", `charges 10_clean`)==TRUE,1,0),
+         charges_11_m = ifelse(grepl("\\[M\\]", `charges 11_clean`)==TRUE,1,0),
+         charges_11_f = ifelse(grepl("\\[F\\]", `charges 11_clean`)==TRUE,1,0),
+         charges_12_m = ifelse(grepl("\\[M\\]", `charges 12_clean`)==TRUE,1,0),
+         charges_12_f = ifelse(grepl("\\[F\\]", `charges 12_clean`)==TRUE,1,0),
+         charges_13_m = ifelse(grepl("\\[M\\]", `charges 13_clean`)==TRUE,1,0),
+         charges_13_f = ifelse(grepl("\\[F\\]", `charges 13_clean`)==TRUE,1,0),
+         charges_14_m = ifelse(grepl("\\[M\\]", `charges 14_clean`)==TRUE,1,0),
+         charges_14_f = ifelse(grepl("\\[F\\]", `charges 14_clean`)==TRUE,1,0),
+         charges_15_m = ifelse(grepl("\\[M\\]", `charges 15_clean`)==TRUE,1,0),
+         charges_15_f = ifelse(grepl("\\[F\\]", `charges 15_clean`)==TRUE,1,0),
+         charges_16_m = ifelse(grepl("\\[M\\]", `charges 16_clean`)==TRUE,1,0),
+         charges_16_f = ifelse(grepl("\\[F\\]", `charges 16_clean`)==TRUE,1,0),
+         charges_17_m = ifelse(grepl("\\[M\\]", `charges 17_clean`)==TRUE,1,0),
+         charges_17_f = ifelse(grepl("\\[F\\]", `charges 17_clean`)==TRUE,1,0),
+         charges_18_m = ifelse(grepl("\\[M\\]", `charges 18_clean`)==TRUE,1,0),
+         charges_18_f = ifelse(grepl("\\[F\\]", `charges 18_clean`)==TRUE,1,0),
+         charges_19_m = ifelse(grepl("\\[M\\]", `charges 19_clean`)==TRUE,1,0),
+         charges_19_f = ifelse(grepl("\\[F\\]", `charges 19_clean`)==TRUE,1,0),
+         charges_20_m = ifelse(grepl("\\[M\\]", `charges 20_clean`)==TRUE,1,0),
+         charges_20_f = ifelse(grepl("\\[F\\]", `charges 20_clean`)==TRUE,1,0),
+         charges_21_m = ifelse(grepl("\\[M\\]", `charges 21_clean`)==TRUE,1,0),
+         charges_21_f = ifelse(grepl("\\[F\\]", `charges 21_clean`)==TRUE,1,0),
+         charges_22_m = ifelse(grepl("\\[M\\]", `charges 22_clean`)==TRUE,1,0),
+         charges_22_f = ifelse(grepl("\\[F\\]", `charges 22_clean`)==TRUE,1,0),
+         charges_23_m = ifelse(grepl("\\[M\\]", `charges 23_clean`)==TRUE,1,0),
+         charges_23_f = ifelse(grepl("\\[F\\]", `charges 23_clean`)==TRUE,1,0),
+         charges_24_m = ifelse(grepl("\\[M\\]", `charges 24_clean`)==TRUE,1,0),
+         charges_24_f = ifelse(grepl("\\[F\\]", `charges 24_clean`)==TRUE,1,0),
+         charges_25_m = ifelse(grepl("\\[M\\]", `charges 25_clean`)==TRUE,1,0),
+         charges_25_f = ifelse(grepl("\\[F\\]", `charges 25_clean`)==TRUE,1,0),
+         charges_26_m = ifelse(grepl("\\[M\\]", `charges 26_clean`)==TRUE,1,0),
+         charges_26_f = ifelse(grepl("\\[F\\]", `charges 26_clean`)==TRUE,1,0),
+         charges_27_m = ifelse(grepl("\\[M\\]", `charges 27_clean`)==TRUE,1,0),
+         charges_27_f = ifelse(grepl("\\[F\\]", `charges 27_clean`)==TRUE,1,0),
+         charges_28_m = ifelse(grepl("\\[M\\]", `charges 28_clean`)==TRUE,1,0),
+         charges_28_f = ifelse(grepl("\\[F\\]", `charges 28_clean`)==TRUE,1,0),
+         charges_29_m = ifelse(grepl("\\[M\\]", `charges 29_clean`)==TRUE,1,0),
+         charges_29_f = ifelse(grepl("\\[F\\]", `charges 29_clean`)==TRUE,1,0),
+         charges_30_m = ifelse(grepl("\\[M\\]", `charges 30_clean`)==TRUE,1,0),
+         charges_30_f = ifelse(grepl("\\[F\\]", `charges 30_clean`)==TRUE,1,0),
+         charges_31_m = ifelse(grepl("\\[M\\]", `charges 31_clean`)==TRUE,1,0),
+         charges_31_f = ifelse(grepl("\\[F\\]", `charges 31_clean`)==TRUE,1,0),
+         charges_32_m = ifelse(grepl("\\[M\\]", `charges 32_clean`)==TRUE,1,0),
+         charges_32_f = ifelse(grepl("\\[F\\]", `charges 32_clean`)==TRUE,1,0),
+         charges_33_m = ifelse(grepl("\\[M\\]", `charges 33_clean`)==TRUE,1,0),
+         charges_33_f = ifelse(grepl("\\[F\\]", `charges 33_clean`)==TRUE,1,0),
+         charges_34_m = ifelse(grepl("\\[M\\]", `charges 34_clean`)==TRUE,1,0),
+         charges_34_f = ifelse(grepl("\\[F\\]", `charges 34_clean`)==TRUE,1,0),
+         charges_35_m = ifelse(grepl("\\[M\\]", `charges 35_clean`)==TRUE,1,0),
+         charges_35_f = ifelse(grepl("\\[F\\]", `charges 35_clean`)==TRUE,1,0),
+         charges_36_m = ifelse(grepl("\\[M\\]", `charges 36_clean`)==TRUE,1,0),
+         charges_36_f = ifelse(grepl("\\[F\\]", `charges 36_clean`)==TRUE,1,0))
+        
+# create columns for total misdemeanors and felonies, summing the above columns we just created
+booking <- booking %>%
+  mutate(total_m = charges_1_m + charges_2_m + charges_3_m + charges_4_m + charges_5_m +
+           charges_6_m + charges_7_m + charges_8_m + charges_9_m + charges_10_m +
+           charges_11_m + charges_12_m + charges_13_m + charges_14_m + charges_15_m +
+           charges_16_m + charges_17_m + charges_18_m + charges_19_m + charges_20_m +
+           charges_21_m + charges_22_m + charges_23_m + charges_24_m + charges_25_m +
+           charges_26_m + charges_27_m + charges_28_m + charges_29_m + charges_30_m +
+           charges_31_m + charges_32_m + charges_33_m + charges_34_m + charges_35_m +
+           charges_36_m,
+         total_f = charges_1_f + charges_2_f + charges_3_f + charges_4_f + charges_5_f +
+           charges_6_f + charges_7_f + charges_8_f + charges_9_f + charges_10_f +
+           charges_11_f + charges_12_f + charges_13_f + charges_14_f + charges_15_f +
+           charges_16_f + charges_17_f + charges_18_f + charges_19_f + charges_20_f +
+           charges_21_f + charges_22_f + charges_23_f + charges_24_f + charges_25_f +
+           charges_26_f + charges_27_f + charges_28_f + charges_29_f + charges_30_f +
+           charges_31_f + charges_32_f + charges_33_f + charges_34_f + charges_35_f +
+           charges_36_f)
+
+
+# create columns for total bail
+booking <- booking %>%
+  mutate(total_bail = rowSums(select(., contains("bail")), na.rm = TRUE))
+
+
+```
+
+### Coding race as a categorical variable
+
+In order to use a categorical variable like race in our multiple linear regression, we need to code it as a factor.
+
+```{r results="hide", warning=FALSE, message=FALSE}
+
+# creating a factor variable for race in order to use it in a linear regression
+booking$race.f <- factor(booking$RACE)
+is.factor(booking$race.f)
+
+print(levels(booking$race.f))
+
+booking$race.f = factor(booking$race.f,levels(booking$race.f)[c(6,3,4,2,1,5)])
+
+```
+
+### Looking at the distribution of the total bail amounts
+
+To do a multiple linear regression, we'd like our output to be approximately normal. So, let's take a look ... 
+
+```{r, warning=FALSE, message=FALSE}
+
+# distribution of total bail
+hist_total_bail <- ggplot(booking, aes(x=total_bail)) + geom_histogram()
+
+plot(hist_total_bail)
+
+```
+
+### Transforming total bail column 
+
+In order to get an approximately normal distribution for total bail, we can do a log10 transformation on the variable. Now, let's look at the distribution.
+
+```{r, warning=FALSE, message=FALSE}
+
+# bail, our outcome variable, is highly skewed, so let's going to perform a transformation on the bail column and then drop the infinites values we've created
+booking <- booking %>%
+  mutate(total_bail_transform = log10(total_bail))
+
+booking$total_bail_transform[which(is.infinite(booking$total_bail_transform))] = NA
+
+# now, looking at distribution of transformed variable
+hist_total_bail_transform <- ggplot(booking, aes(x=total_bail_transform)) + geom_histogram()
+
+plot(hist_total_bail_transform)
+
+```
+
+### Building our model
+
+Time for the regression. First, there are some people charged with offenses that are not bailable. We don't want to include them in our analysis as that'll skew the outcome. Then, we'll build a model, with the transformed total bail column as the outcome and race, age and crimes as the variables.
+
+Our initial results show that this model explains about 30 percent of the variation in bail amounts (with an adjusted R-squared of 0.2976). But it also shows that six of our variables were statistically significant, including whether the defendant was black or hispanic, the defendant's age, and the number of felonies and misdemeanors the defendant was charged with.
+
+```{r, warning=FALSE, message=FALSE}
+
+# filter out those who weren't given bail
+booking <- booking %>%
+  mutate(no_bail = ifelse(grepl("NO BAIL", CHARGES)==TRUE,"NO BAIL","BAILABLE"))
+
+booking_bailable <- booking %>%
+  filter(no_bail == "BAILABLE")
+
+# multiple linear regression 
+fit <- lm(total_bail_transform ~ race.f + total_m + total_f + AGE, data=booking_bailable)
+summary(fit)
+
+```
+
+### Testing our model
+
+We came up with an OK model, so now we want to make sure we haven't overfit it. That is, we want to try to be sure we didn't make a model that works only on this particular dataset. To check this, we'll sample the original data set and to create test and training datasets, then we'll try our model out on them. 
+
+```{r, warning=FALSE, message=FALSE}
+# now creating a training and test data set to test my model
+
+train_idx <- sample(1:nrow(booking_bailable),10991,replace=FALSE)
+booking_bailable_training <- booking_bailable[train_idx,] # selecting all these rows
+booking_bailable_test <- booking_bailable[-train_idx,] # selecting all but these rows
+
+# testing fit on training and test data
+
+fit_training <- lm(total_bail_transform ~ race.f + total_m + total_f + AGE, data=booking_bailable_training)
+summary(fit_training)
+
+fit_test <- lm(total_bail_transform ~ race.f + total_m + total_f + AGE, data=booking_bailable_test)
+summary(fit_test)
+
+```
+
+### What next?
+
+I've done a multiple linear regression. Next up is a logistic regression, which I would use to measure whether a defendant was given a "progressive" type of release (a pre-trial program, OR, etc.) or a "punitive" type of release (time served, bond, etc.). Since we saw disparities in types of release by race in the analysis, I'd like to use a logistic regression model to further analyze the factors that may influence a defendant's release type.
+
+As useful as this analysis is, the data has challenges and limitations, both of which warrant more reporting. 
+
+One such challenge is, when doing the regression, there is a potentially significant hidden variable: the defendant’s prior offenses. I don’t know their records, which could be a problem when I’m trying to determine why two people of different races committed the same crime but were given different bail amounts. Judges use "bail schedules" to determine bail amounts. Each county has its own bail schedule and each judge can deviate from them as they wish. Prosecutors tend to cite a defendant's prior offenses when asking for a high bail amount. It's ultimately up to the judges whether or not to take this into account. More reporting is needed to develop a workaround to these complications.
+
+### Thank you
+
+... to [Peter Aldhous](https://twitter.com/paldhous) and [Amanda Hickman](https://twitter.com/amandabee), our intrepid professors. This project was produced in their advanced data reporting course at UC Berkeley's Graduate School of Journalism.

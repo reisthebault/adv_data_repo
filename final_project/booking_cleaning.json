@@ -582,7 +582,7 @@
     },
     "columnName": "CHARGES",
     "guessCellType": true,
-    "removeOriginalColumn": true,
+    "removeOriginalColumn": false,
     "mode": "separator",
     "separator": ";",
     "regex": false,
@@ -1641,12 +1641,12 @@
   },
   {
     "op": "core/column-addition",
-    "description": "Create column charges 23_bail at index 80 based on column CHARGES 23 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
+    "description": "Create column charges 23_clean at index 80 based on column CHARGES 23 using expression grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
-    "newColumnName": "charges 23_bail",
+    "newColumnName": "charges 23_clean",
     "columnInsertIndex": 80,
     "baseColumnName": "CHARGES 23",
     "expression": "grel:value.match(/.*(\\].+\\{).*/)[0].replace(\"{\",\"\").replace(\"]\",\"\").replace(\"[I\",\"[I]\").replace(\"[O\",\"[O]\").replace(\"[F\",\"[F]\").replace(\"[M\",\"[M]\")",
